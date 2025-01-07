@@ -1,19 +1,108 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+<title>CSS Template</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+  background-color: #666;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 30%;
+  height: 300px; /* only for demonstration, should be removed */
+  background: #ccc;
+  padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color: #f1f1f1;
+  height: 300px; /* only for demonstration, should be removed */
+}
+
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
+</head>
 <body>
 
-<h2>HTML Forms</h2>
+<h2>CSS Layout Float</h2>
+<p>Neste exemplo, criamos um cabeçalho, duas colunas/caixas e um rodapé. Em telas menores, as colunas serão empilhadas uma sobre a outra.</p>
+<p>Redimensione a janela do navegador para ver o efeito responsivo (você aprenderá mais sobre isso em nosso próximo capítulo - HTML responsivo).</p>
 
-<form action="teste.html">
-  <label for="fname">Primeiro nome:</label><br>
-  <input type="text" id="fname" name="fname" value="Letícia"><br>
-  <label for="lname">Sobrenome:</label><br>
-  <input type="text" id="lname" name="lname" value="Schimerski"><br><br>
-  <input type="submit" value="Submit">
-</form> 
+<header>
+  <h2>Sobre Mim</h2>
+</header>
 
-<p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p>
+<section>
+  <nav>
+    <ul>
+      <li><a href="#">Letícia</a></li>
+      <li><a href="#">Schimerski</a></li>
+      <li><a href="#">Carneiro</a></li>
+    </ul>
+  </nav>
+  
+  <article>
+    <h1>Leticia</h1>
+    <p>Letícia Schimerski tem 17 anos e celebra seu aniversário no dia 8 de janeiro. Natural de Tunas do Paraná, ela traz consigo a energia jovem de quem está descobrindo o mundo e construindo seus sonhos. Sempre determinada e cheia de potencial, Letícia carrega em sua jornada o desejo de crescer e aprender cada vez mais. 🌟</p>
+    <p>Ela tem o objetivo claro de passar no curso e conquistar seu espaço na área da tecnologia, mostrando dedicação e força de vontade em cada passo que dá.</p>
+  </article>
+</section>
+
+<footer>
+  <p>Footer</p>
+</footer>
 
 </body>
 </html>
+
+
+
+
 
